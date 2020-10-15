@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/bootstrap.min.css')}}">
+    <title>
+    {% block title %}
+        Control Acceso |
+    {% endblock %}
+    </title>
+
+</head>
+<body>
+    
+    {% include 'nav.html' %}
+    <div class="mx-5 mt-5">
+    {%  block content %} {% endblock %}
+    </div>
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>    
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+{% endblock %}    
+{% block footer %}
+
+{% endblock %}
+</body>
+</html>

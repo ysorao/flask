@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>Ups!</h1>
+        <h4> Hay algo mal en tu busqueda, revisa la url e intenta de nuevo</h4>
+        
+    
+        <div class="row justify-content-center align-items-center minh-100">
+            <img class="img-fluid text-center" style="width: 40% " src="{{ url_for('static', filename = 'images/404.jpg')}}" alt="error de acceso">
+        </div>
+        <p> {{ error }} </p>
+    </div>
+{% endblock %}

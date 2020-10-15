@@ -1,0 +1,24 @@
+{% import 'macros.html' as macros %}
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+    {{ super() }} 
+    Login
+{% endblock %}
+
+
+{% block content %}
+
+    <form method="POST" action="{{url_for('login')}}">
+        {{ macros.render_field(loginForm.username,  class="form-control")}}
+        {{ macros.render_field(loginForm.password, class="form-control") }}
+        {{ macros.render_field(loginForm.submit, class="btn btn-primary btn-block") }}
+        
+    </form>
+
+    {{ username }}
+
+{% endblock %}
+
